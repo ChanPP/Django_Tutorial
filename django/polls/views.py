@@ -22,11 +22,10 @@ def index(request):
 
 
 def detail(request, question_id):
-
-
-
-
-
+    question = Question.objects.get(pk=question_id)
+    context = {
+        'question': question,
+    }
     return HttpResponse("You're looking at question %s." % question_id)
 
 
