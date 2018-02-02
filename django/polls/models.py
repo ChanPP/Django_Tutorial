@@ -17,5 +17,5 @@ class Choice(models.Model):
     def __str__(self):
         return '{} | {}'.format(
             self.question.question_text,
-            self.choice_text
+            self.choice_text,
         )
